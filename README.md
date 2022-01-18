@@ -11,7 +11,7 @@ This repository allows you to quickly install memcached into a [Ddev](https://dd
 
 ## Explanation
 
-This memcached recipe for [ddev](https://ddev.readthedocs.io) installs a [`.ddev/docker-compose.memcached.yaml`](docker-compose.memcached.yaml) using the memcached:1.5 docker image.
+This memcached recipe for [ddev](https://ddev.readthedocs.io) installs a [`.ddev/docker-compose.memcached.yaml`](docker-compose.memcached.yaml) using the `memcached` docker image.
 
 ## Interacting with Memcached
 
