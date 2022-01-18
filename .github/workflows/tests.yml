@@ -61,7 +61,7 @@ jobs:
     - name: Download docker images
       run: | 
         mkdir junk && pushd junk && ddev config --auto && ddev debug download-images
-        docker pull solr:8
+        docker pull memcached:1.5
     - name: tmate debugging session
       uses: mxschmitt/action-tmate@v3
       with:
