@@ -1,5 +1,5 @@
 # DDEV-Local memcached recipe file.
-#
+#ddev-generated
 # To use this in your own project:
 # 1. Copy this file to your project's ".ddev" directory.
 # 2. Launch "ddev start".
