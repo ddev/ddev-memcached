@@ -1,12 +1,12 @@
-[![tests](https://github.com/drud/ddev-memcached/actions/workflows/tests.yml/badge.svg)](https://github.com/drud/ddev-memcached/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
+[![tests](https://github.com/ddev/ddev-memcached/actions/workflows/tests.yml/badge.svg)](https://github.com/ddev/ddev-memcached/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
 
 ## What is this?
 
-This repository allows you to quickly install memcached into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get drud/ddev-memcached`.
+This repository allows you to quickly install memcached into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get ddev/ddev-memcached`.
 
 ## Installation
 
-1.`ddev get drud/ddev-memcached && ddev restart`
+1.`ddev get ddev/ddev-memcached && ddev restart`
 5. `ddev restart`
 
 ## Explanation

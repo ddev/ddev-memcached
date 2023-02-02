@@ -31,8 +31,9 @@ teardown() {
 @test "install from release" {
   set -eu -o pipefail
   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-  echo "# ddev get drud/ddev-elasticsearch with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev get drud/ddev-elasticsearch
+  echo "# ddev get ddev/ddev-elasticsearch with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev get ddev/ddev-memcached
   ddev restart
-  ddev exec "curl -s elasticsearch:9200" | grep "${PROJNAME}-elasticsearch"
+  v=$(ddev exec 'printf "version\nquit\nquit\n" | nc memcached 11211')
+  [[ "${v}" = VERSION* ]]
 }
