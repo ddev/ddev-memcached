@@ -1,4 +1,4 @@
-name: ddev-memcached
+name: memcached
 
 pre_install_actions:
 
