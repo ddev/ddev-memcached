@@ -6,7 +6,15 @@ This repository allows you to quickly install Memcached into a [DDEV](https://dd
 
 ## Installation
 
+For DDEV v1.23.5 or above run
+
+```sh
+ddev add-on get ddev/ddev-memcached && ddev restart
 ```
+
+For earlier versions of DDEV run
+
+```sh
 ddev get ddev/ddev-memcached && ddev restart
 ```
 
