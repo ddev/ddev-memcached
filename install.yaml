@@ -1,9 +1,6 @@
 name: memcached
 
-pre_install_actions:
-
-# files and directories listed here are copied into .ddev
 project_files:
-- docker-compose.memcached.yaml
+  - docker-compose.memcached.yaml
 
-post_install_actions:
+ddev_version_constraint: '>= v1.24.3'
