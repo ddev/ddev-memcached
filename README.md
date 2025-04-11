@@ -1,29 +1,42 @@
-[![tests](https://github.com/ddev/ddev-memcached/actions/workflows/tests.yml/badge.svg)](https://github.com/ddev/ddev-memcached/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
+[![tests](https://github.com/ddev/ddev-memcached/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/ddev/ddev-memcached/actions/workflows/tests.yml?query=branch%3Amain)
+[![last commit](https://img.shields.io/github/last-commit/ddev/ddev-memcached)](https://github.com/ddev/ddev-memcached/commits)
+[![release](https://img.shields.io/github/v/release/ddev/ddev-memcached)](https://github.com/ddev/ddev-memcached/releases/latest)
 
-## What is this?
+# DDEV Memcached
 
-This repository allows you to quickly install Memcached into a [DDEV](https://ddev.readthedocs.io) project using `ddev get ddev/ddev-memcached`.
+## Overview
+
+[Memcached](https://memcached.org/) is a free & open source, high-performance, distributed memory object caching system.
+
+This add-on integrates Memcached into your [DDEV](https://ddev.com/) project.
 
 ## Installation
 
-For DDEV v1.23.5 or above run
-
-```sh
-ddev add-on get ddev/ddev-memcached && ddev restart
+```bash
+ddev add-on get ddev/ddev-memcached
+ddev restart
 ```
 
-For earlier versions of DDEV run
+After installation, make sure to commit the `.ddev` directory to version control.
 
-```sh
-ddev get ddev/ddev-memcached && ddev restart
-```
-
-## Explanation
-
-This Memcached recipe for [DDEV](https://ddev.readthedocs.io) installs a [`.ddev/docker-compose.memcached.yaml`](docker-compose.memcached.yaml) using the `memcached` Docker image.
-
-## Interacting with Memcached
+## Usage
 
 * The Memcached instance will listen on TCP port 11211 (the Memcached default).
 * Configure your application to access Memcached on the host:port `memcached:11211`.
 * To reach the Memcached admin interface, run `ddev ssh` to connect to the web container, then use `nc` or `telnet` to connect to the Memcached container on port 11211, i.e. `nc memcached 11211`. You can then run commands such as `stats` to see usage information. See [cheatsheet](https://lzone.de/cheat-sheet/memcached) for more commands.
+
+## Advanced Customization
+
+To change the docker image:
+
+```bash
+ddev dotenv set .ddev/.env.memcached --memcached-docker-image=memcached:1.6
+ddev add-on get ddev/ddev-memcached
+ddev restart
+```
+
+Make sure to commit the `.ddev/.env.memcached` file to version control.
+
+## Credits
+
+**Maintained by the [DDEV team](https://ddev.com/support-ddev/)**
