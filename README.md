@@ -24,7 +24,7 @@ After installation, make sure to commit the `.ddev` directory to version control
 
 * The Memcached instance will listen on TCP port 11211 (the Memcached default).
 * Configure your application to access Memcached on the host:port `memcached:11211`.
-* To reach the Memcached admin interface, run `ddev ssh` to connect to the web container, then use `nc` or `telnet` to connect to the Memcached container on port 11211, i.e. `nc memcached 11211`. You can then run commands such as `stats` to see usage information. See [cheatsheet](https://lzone.de/cheat-sheet/memcached) for more commands.
+* To reach the Memcached admin interface, run `ddev ssh` to connect to the web container, then use `nc` or `telnet` to connect to the Memcached container on port 11211, i.e. `nc memcached 11211`. You can then run commands such as `stats` to see usage information. See [cheatsheet](https://lzone.de/#/Cheat%20Sheets/LZone%20Cheat%20Sheets/DevOps%20Services/memcached) for more commands.
 
 ## Advanced Customization
 
