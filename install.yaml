@@ -3,4 +3,4 @@ name: memcached
 project_files:
   - docker-compose.memcached.yaml
 
-ddev_version_constraint: '>= v1.24.3'
+ddev_version_constraint: '>= v1.24.10'
